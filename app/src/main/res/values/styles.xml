@@ -1,0 +1,98 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--  Window settings  -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--  Buttons  -->
+    <style name="CustomShapeAppearance">
+        <item name="cornerSizeTopLeft">@dimen/_12sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_12sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_12sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_12sdp</item>
+    </style>
+
+    <style name="RoundedShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_30sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_30sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_30sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_30sdp</item>
+    </style>
+
+    <!-- Fonts -->
+    <style name="TextAppearance.AppBarTitle" parent="android:TextAppearance">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="fontStyle">normal</item>
+        <item name="fontWeight">500</item>
+        <item name="lineHeight">@dimen/_24sdp</item>
+        <item name="android:textSize">@dimen/_22ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Regular" parent="android:TextAppearance">
+        <item name="fontFamily">sans-serif</item>
+        <item name="lineHeight">@dimen/_21sdp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextAppearance.Regular.Italic" parent="TextAppearance.Regular">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TextAppearance.Light" parent="TextAppearance.Regular">
+        <item name="fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextAppearance.Light.Italic" parent="TextAppearance.Light">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TextAppearance.Regular.Big" parent="TextAppearance.Regular">
+        <item name="lineHeight">@dimen/_28sdp</item>
+        <item name="android:textSize">@dimen/_24ssp</item>
+    </style>
+
+    <style name="TextAppearance.Regular.Big.Light" parent="TextAppearance.Regular.Big">
+        <item name="fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="android:TextAppearance">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="fontStyle">normal</item>
+        <item name="lineHeight">@dimen/_21sdp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextAppearance.Medium.Big" parent="TextAppearance.Medium">
+        <item name="lineHeight">@dimen/_28sdp</item>
+        <item name="android:textSize">@dimen/_24ssp</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+</resources>

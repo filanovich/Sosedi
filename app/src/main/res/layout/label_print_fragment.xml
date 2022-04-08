@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="by.imlab.sosedi.ui.labelprint.LabelPrintFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totalCargoSpacesText"
+        style="@style/TextAppearance.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_41sdp"
+        android:text="@string/cargo_places_opened"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totalCargoSpaces"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_44sdp"
+        android:textSize="@dimen/_48ssp"
+        app:layout_constraintBottom_toBottomOf="@id/totalCargoSpacesText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/totalCargoSpacesText"
+        tools:text="5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/addOneMoreText"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:text="@string/open_bag_cargo_space"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorTextPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/openCargoPlaceButton"
+        app:layout_constraintEnd_toStartOf="@id/openCargoPlaceButton"
+        app:layout_constraintTop_toTopOf="@id/openCargoPlaceButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/openCargoPlaceButton"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:backgroundTint="@color/colorButtonSecondary"
+        android:elevation="@dimen/_10sdp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_plus"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="@dimen/_40sdp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalCargoSpaces"
+        app:shapeAppearanceOverlay="@style/RoundedShapeAppearance" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/listPrintedLabelsText"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_36sdp"
+        android:text="@string/list_printed_labels"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/openCargoPlaceButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/printedLabels"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listPrintedLabelsText"
+        tools:listitem="@layout/label_print_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

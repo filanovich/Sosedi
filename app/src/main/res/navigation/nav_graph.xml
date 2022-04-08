@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/searchPrinterFragment"
+        android:name="by.imlab.sosedi.ui.searchprinter.SearchPrinterFragment"
+        android:label="@string/connect_printer"
+        tools:layout="@layout/search_printer_fragment">
+        <action
+            android:id="@+id/action_searchPrinterFragment_to_scanPrinterFragment"
+            app:destination="@id/scanPrinterFragment" />
+        <action
+            android:id="@+id/action_searchPrinterFragment_to_ordersListFragment"
+            app:destination="@id/ordersListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanPrinterFragment"
+        android:name="by.imlab.sosedi.ui.scanprinter.ScanPrinterFragment"
+        android:label="@string/scan_printer"
+        tools:layout="@layout/scan_printer_fragment">
+        <action
+            android:id="@+id/action_scanPrinterFragment_to_ordersListFragment"
+            app:destination="@id/ordersListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersListFragment"
+        android:name="by.imlab.sosedi.ui.orderslist.OrdersListFragment"
+        android:label="@string/new_orders"
+        tools:layout="@layout/orders_list_fragment">
+        <action
+            android:id="@+id/action_ordersListFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+        <action
+            android:id="@+id/action_ordersListFragmen_to_specificationFragment"
+            app:destination="@id/specificationFragment" />
+        <action
+            android:id="@+id/action_ordersListFragment_to_openPackageFragment"
+            app:destination="@id/openPackageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="by.imlab.sosedi.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_searchPrinterFragment"
+            app:destination="@id/searchPrinterFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_ordersListFragment"
+            app:destination="@id/ordersListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="by.imlab.sosedi.ui.settings.SettingsFragment"
+        android:label="@string/settings">
+    </fragment>
+    <fragment
+        android:id="@+id/underwayFragment"
+        android:name="by.imlab.sosedi.ui.underway.UnderwayFragment"
+        android:label="@string/underway"
+        tools:layout="@layout/underway_fragment">
+        <action
+            android:id="@+id/action_underwayFragment_to_openPackageFragment"
+            app:destination="@id/openPackageFragment" />
+        <action
+            android:id="@+id/action_underwayFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+        <action
+            android:id="@+id/action_underwayFragment_to_specificationFragment"
+            app:destination="@id/specificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/openPackageFragment"
+        android:name="by.imlab.sosedi.ui.openpackage.OpenPackageFragment"
+        android:label="@string/underway"
+        tools:layout="@layout/open_package_fragment">
+        <action
+            android:id="@+id/action_openPackageFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+        <action
+            android:id="@+id/action_openPackageFragment_to_specificationFragment"
+            app:destination="@id/specificationFragment" />
+        <action
+            android:id="@+id/action_openPackageFragment_to_searchPrinterFragment"
+            app:destination="@id/searchPrinterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="by.imlab.sosedi.ui.orderdetails.OrderDetailsFragment"
+        android:label="@string/underway"
+        tools:layout="@layout/order_details_fragment">
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_skuDetailsFragment"
+            app:destination="@id/skuDetailsFragment" />
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_ordersListFragment"
+            app:destination="@id/ordersListFragment" />
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_openCargoNavigation"
+            app:destination="@id/openCargoNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/skuDetailsFragment"
+        android:name="by.imlab.sosedi.ui.skudetails.SkuDetailsFragment"
+        android:label="@string/underway"
+        tools:layout="@layout/sku_details_fragment">
+        <argument
+            android:name="skuId"
+            app:argType="long" />
+        <argument
+            android:name="orderNumber"
+            app:argType="string" />
+        <argument
+            android:name="barcode"
+            app:argType="string" />
+        <argument
+            android:name="allowedSpaces"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/specificationFragment"
+        android:name="by.imlab.sosedi.ui.specification.SpecificationFragment"
+        android:label="@string/specification_order"
+        tools:layout="@layout/specification_fragment">
+        <action
+            android:id="@+id/action_specificationFragment_to_skuDetailsFragment"
+            app:destination="@id/skuDetailsFragment" />
+        <action
+            android:id="@+id/action_specificationFragment_to_ordersListFragment"
+            app:destination="@id/ordersListFragment" />
+        <action
+            android:id="@+id/action_specificationFragment_to_labelPrintFragment"
+            app:destination="@id/labelPrintFragment" />
+        <argument
+            android:name="orderId"
+            app:argType="long" />
+        <argument
+            android:name="canEdit"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/labelPrintFragment"
+        android:name="by.imlab.sosedi.ui.labelprint.LabelPrintFragment"
+        android:label="@string/bag_cargo_place_label"
+        tools:layout="@layout/label_print_fragment">
+        <argument
+            android:name="orderId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_labelPrintFragment_to_searchPrinterFragment"
+            app:destination="@id/searchPrinterFragment" />
+        <action
+            android:id="@+id/action_labelPrintFragment_to_openCargoNavigation"
+            app:destination="@id/openCargoNavigation" />
+    </fragment>
+    <navigation
+        android:id="@+id/transferNavigation"
+        app:startDestination="@id/transferredOrdersFragment">
+        <fragment
+            android:id="@+id/transferredOrdersFragment"
+            android:name="by.imlab.sosedi.ui.transferredorders.TransferredOrdersFragment"
+            android:label="@string/transferred_orders"
+            tools:layout="@layout/transferred_orders_fragment">
+            <action
+                android:id="@+id/action_transferredOrdersFragment_to_transferredSpecFragment"
+                app:destination="@id/transferredSpecFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/transferredSpecFragment"
+            android:name="by.imlab.sosedi.ui.transferredspec.TransferredSpecFragment"
+            android:label="@string/transferred_to_the_courier_order"
+            tools:layout="@layout/transferred_spec_fragment">
+            <argument
+                android:name="orderId"
+                app:argType="long" />
+        </fragment>
+    </navigation>
+    <navigation
+        android:id="@+id/collectedNavigation"
+        app:startDestination="@id/collectedOrdersFragment">
+        <fragment
+            android:id="@+id/collectedOrdersFragment"
+            android:name="by.imlab.sosedi.ui.collectedorders.CollectedOrdersFragment"
+            android:label="@string/collected_orders"
+            tools:layout="@layout/collected_orders_fragment">
+            <action
+                android:id="@+id/action_collectedOrdersFragment_to_collectedTransferFragment"
+                app:destination="@id/collectedTransferFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/collectedTransferFragment"
+            android:name="by.imlab.sosedi.ui.collectedtransfer.CollectedTransferFragment"
+            android:label="@string/transfer_order_to_the_courier"
+            tools:layout="@layout/collected_transfer_fragment">
+            <argument
+                android:name="orderId"
+                app:argType="long" />
+            <action
+                android:id="@+id/action_collectedTransferFragment_to_collectedSpecFragment"
+                app:destination="@id/collectedSpecFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/collectedSpecFragment"
+            android:name="by.imlab.sosedi.ui.collectedspec.CollectedSpecFragment"
+            android:label="@string/collected_order_spec"
+            tools:layout="@layout/collected_spec_fragment">
+            <argument
+                android:name="orderId"
+                app:argType="long" />
+            <action
+                android:id="@+id/action_collectedSpecFragment_to_labelPrintFragment"
+                app:destination="@id/labelPrintFragment" />
+        </fragment>
+    </navigation>
+    <navigation
+        android:id="@+id/cancelledNavigation"
+        app:startDestination="@id/cancelledOrdersFragment">
+        <fragment
+            android:id="@+id/cancelledOrdersFragment"
+            android:name="by.imlab.sosedi.ui.cancelledorders.CancelledOrdersFragment"
+            android:label="@string/cancelled_orders"
+            tools:layout="@layout/cancelled_orders_fragment">
+        </fragment>
+    </navigation>
+    <navigation
+        android:id="@+id/openCargoNavigation"
+        app:startDestination="@id/cargoSpaceFragment">
+        <fragment
+            android:id="@+id/cargoSpaceFragment"
+            android:name="by.imlab.sosedi.ui.cargospase.CargoSpaceFragment"
+            android:label="@string/open_bag_or_cargo_space"
+            tools:layout="@layout/cargo_space_fragment">
+            <action
+                android:id="@+id/action_cargoSpaceFragment_to_openPocketFragment"
+                app:destination="@id/openPocketFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/openPocketFragment"
+            android:name="by.imlab.sosedi.ui.openpocket.OpenPocketFragment"
+            android:label="@string/open_pocket"
+            tools:layout="@layout/open_pocket_fragment">
+            <argument
+                android:name="orderId"
+                app:argType="long" />
+        </fragment>
+        <argument
+            android:name="orderId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_global_scanPrinterFragment"
+            app:destination="@id/scanPrinterFragment" />
+    </navigation>
+
+</navigation>

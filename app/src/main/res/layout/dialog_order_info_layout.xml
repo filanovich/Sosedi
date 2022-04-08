@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_28sdp"
+    android:paddingVertical="@dimen/_20sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/orderNumber"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_22ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Заказ № 234AB36C74563" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/orderOpenedText"
+        style="@style/TextAppearance.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/order_opened"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderNumber" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/orderOpened"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderOpenedText"
+        tools:text="15.03.20 в 12:15:02" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/orderAddressText"
+        style="@style/TextAppearance.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/order_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderOpened" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/orderAddress"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderAddressText"
+        tools:text="г.Минск, ул. Заречная д.8 кв.10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cargoSpaceNumberText"
+        style="@style/TextAppearance.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/number_of_the_cargo_spaces"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderAddress" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cargoSpaceNumber"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cargoSpaceNumberText"
+        tools:text="5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fullyPackedSkuText"
+        style="@style/TextAppearance.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/fully_packed_sku"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cargoSpaceNumber" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fullyPackedSku"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullyPackedSkuText"
+        tools:text="12 из 15 шт." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totalPackedProductsText"
+        style="@style/TextAppearance.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/total_packed_products"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullyPackedSku" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totalPackedProducts"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalPackedProductsText"
+        tools:text="18 из 25 шт." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

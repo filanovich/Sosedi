@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ordersListFragment"
+        android:icon="@drawable/ic_new_orders"
+        android:title="@string/new_orders" />
+    <item
+        android:id="@+id/underwayFragment"
+        android:icon="@drawable/ic_in_work"
+        android:title="@string/underway" />
+    <item
+        android:id="@+id/collectedNavigation"
+        android:icon="@drawable/ic_packed"
+        android:title="@string/packed" />
+    <item
+        android:id="@+id/transferNavigation"
+        android:icon="@drawable/ic_transferred"
+        android:title="@string/transferred_to_courier" />
+    <item
+        android:id="@+id/cancelledNavigation"
+        android:icon="@drawable/ic_cancelled"
+        android:title="@string/cancelled" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout" />
+
+</menu>

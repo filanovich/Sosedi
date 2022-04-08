@@ -1,0 +1,45 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/server_header">
+
+        <EditTextPreference
+            app:key="@string/preferences_server"
+            app:defaultValue="http://i.sosedi.by:7695"
+            app:title="@string/url"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Ftp-сервер обновлений">
+
+        <EditTextPreference
+            app:key="@string/preferences_updateapp_server"
+            app:defaultValue="office.luxsoft.by"
+            app:singleLine="true"
+            app:title="@string/url"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="@string/preferences_updateapp_user"
+            app:defaultValue="tsd"
+            app:singleLine="true"
+            app:title="@string/username"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="@string/preferences_updateapp_password"
+            app:defaultValue="tsd"
+            app:singleLine="true"
+            app:title="@string/password"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="@string/preferences_updateapp_dir"
+            app:singleLine="true"
+            app:title="Каталог"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

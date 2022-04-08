@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="by.imlab.sosedi.ui.openpackage.OpenPackageFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scanInfoText"
+        style="@style/TextAppearance.Regular.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:gravity="center_horizontal"
+        android:text="@string/scan_package_to_start"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/syncIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/syncIcon"
+        android:layout_width="@dimen/_56sdp"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_82sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_sync"
+        app:layout_constraintBottom_toTopOf="@id/scanWaitText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scanWaitText"
+        style="@style/TextAppearance.Medium.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/waiting_for_package_scan"
+        android:textColor="@color/colorTextSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/openSpaceButton"
+        android:layout_width="@dimen/_340sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_100sdp"
+        android:backgroundTint="@color/colorTextPrimary"
+        android:text="@string/sku_without_package"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

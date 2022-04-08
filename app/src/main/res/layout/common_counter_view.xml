@@ -1,0 +1,76 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/indicateQuantityText"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/minus"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:backgroundTint="@android:color/white"
+            android:elevation="@dimen/_6sdp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_minus"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="@dimen/_40sdp"
+            app:iconTint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@id/number"
+            app:layout_constraintEnd_toStartOf="@id/number"
+            app:layout_constraintTop_toTopOf="@id/number"
+            app:shapeAppearance="@style/CustomShapeAppearance" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/number"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_48ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/indicateQuantityText"
+            tools:text="0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/plus"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:backgroundTint="@android:color/white"
+            android:elevation="@dimen/_6sdp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_plus"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="@dimen/_40sdp"
+            app:iconTint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@id/number"
+            app:layout_constraintStart_toEndOf="@id/number"
+            app:layout_constraintTop_toTopOf="@id/number"
+            app:shapeAppearance="@style/CustomShapeAppearance" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

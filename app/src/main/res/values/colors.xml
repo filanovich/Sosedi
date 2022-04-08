@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EA5E20</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!--  Text  -->
+    <color name="colorTextPrimary">#0082C9</color>
+    <color name="colorTextSecondary">#EC723C</color>
+    <color name="colorTextError">#FF0000</color>
+    <color name="colorTextBigError">#FF1010</color>
+
+    <!--  Other  -->
+    <color name="colorDivider">#ADADAD</color>
+
+    <!--  Login  -->
+    <color name="colorBoxStoke">#2D9CDB</color>
+
+    <!--  Buttons  -->
+    <color name="colorButtonSecondary">#6FCF97</color>
+</resources>

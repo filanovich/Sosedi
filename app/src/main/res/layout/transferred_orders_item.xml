@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="order"
+            type="by.imlab.data.database.entity.OrderEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_28sdp"
+        android:paddingVertical="@dimen/_25sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderDateAndTime"
+            style="@style/TextAppearance.Light"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:text="@{order.formatCollectDate}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="15.03.20 12:37:30" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/transferDateAndTime"
+            style="@style/TextAppearance.Light"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="@{order.formatTransferDate}"
+            app:layout_constraintStart_toEndOf="@id/orderDateAndTime"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="15.03.20 12:37:30" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderNumber"
+            style="@style/TextAppearance.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:text="@{order.number}"
+            app:layout_constraintBottom_toBottomOf="@id/transferDateAndTime"
+            app:layout_constraintStart_toEndOf="@id/transferDateAndTime"
+            app:layout_constraintTop_toTopOf="@id/transferDateAndTime"
+            tools:text="234AB36C74563" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderAddress"
+            style="@style/TextAppearance.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:text="@{order.address}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orderDateAndTime"
+            tools:text="г.Минск, ул. Заречная д.8 кв.10" />
+
+        <ImageView
+            android:id="@+id/dotsMenu"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_dots_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

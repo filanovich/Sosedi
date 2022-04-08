@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/refreshButton"
+        android:icon="@drawable/ic_refresh"
+        android:title="@string/refresh_list"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/enterButton"
+        android:icon="@drawable/ic_enter"
+        android:title="@string/enter_the_app"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="by.imlab.sosedi.ui.underway.UnderwayFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/collectionButton"
+        android:layout_width="@dimen/_340sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/colorTextPrimary"
+        android:text="@string/order_collection"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_collection"
+        app:iconSize="@dimen/_21sdp"
+        app:layout_constraintBottom_toTopOf="@id/specificationButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/specificationButton"
+        android:layout_width="@dimen/_340sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/colorTextPrimary"
+        android:text="@string/order_specification"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_specification"
+        app:iconSize="@dimen/_21sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

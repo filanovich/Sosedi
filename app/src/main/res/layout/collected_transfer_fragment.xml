@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="by.imlab.sosedi.ui.collectedtransfer.CollectedTransferFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailsBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_28sdp"
+        android:paddingTop="@dimen/_35sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderNumberText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/order_number_is_uppercase"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/infoButton"
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="@dimen/_52sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="@id/orderNumberText"
+            app:layout_constraintStart_toEndOf="@id/orderNumberText"
+            app:layout_constraintTop_toTopOf="@id/orderNumberText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderNumber"
+            style="@style/TextAppearance.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="234AB36C74563" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderAddress"
+            style="@style/TextAppearance.Light"
+            android:layout_width="@dimen/_235sdp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orderNumber"
+            tools:text="г.Минск, ул. Заречная д.8 кв.10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scannedLabelsText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:text="@string/label_scan"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orderNumberText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scannedLabels"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintBottom_toBottomOf="@id/scannedLabelsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/scannedLabelsText"
+            tools:text="1 из 3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedSkuText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22ssp"
+            android:text="@string/fully_assembled_sku"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scannedLabelsText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedSkuCount"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintBottom_toBottomOf="@id/totalCollectedSkuText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/totalCollectedSkuText"
+            tools:text="15 из 15 шт" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedProductsText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22ssp"
+            android:text="@string/total_goods_collected"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalCollectedSkuText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedProductsCount"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintBottom_toBottomOf="@id/totalCollectedProductsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/totalCollectedProductsText"
+            tools:text="25 из 25 шт" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scanText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/scan_all_labels_in_the_order"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalCollectedProductsText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cargoSpaces"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/transferButton"
+        app:layout_constraintTop_toBottomOf="@id/detailsBlock"
+        tools:listitem="@layout/collected_transfer_item" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/transferButton"
+        android:layout_width="@dimen/_326sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:backgroundTint="@color/colorTextPrimary"
+        android:text="@string/transfer_to_the_courier"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

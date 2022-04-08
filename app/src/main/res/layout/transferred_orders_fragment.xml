@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="by.imlab.sosedi.ui.transferredorders.TransferredOrdersFragment">
+
+    <FrameLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_28sdp"
+        android:layout_marginVertical="@dimen/_24ssp"
+        android:background="@android:color/white"
+        android:elevation="@dimen/_6sdp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/collected_order_search_field_background"
+            android:outlineProvider="bounds"
+            app:closeIcon="@drawable/ic_clear"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/enter_order_number"
+            app:searchHintIcon="@null"
+            app:searchIcon="@drawable/ic_search" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ordersListBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/totalInfoBlock">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateAndTimeText"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_58sdp"
+            android:text="@string/date_and_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/assemblyTimeText"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:text="@string/assembly"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateAndTimeText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/transferTimeText"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:text="@string/transfer"
+            app:layout_constraintStart_toEndOf="@id/assemblyTimeText"
+            app:layout_constraintTop_toBottomOf="@id/dateAndTimeText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderNumberText"
+            style="@style/TextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="@string/order_number"
+            app:layout_constraintStart_toEndOf="@id/transferTimeText"
+            app:layout_constraintTop_toBottomOf="@id/dateAndTimeText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transferredOrders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/transferred_orders_item" />
+
+</LinearLayout>

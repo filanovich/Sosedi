@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/enterCodeManually"
+        android:title="@string/enter_code_manually" />
+    <item
+        android:id="@+id/skipTemporarily"
+        android:title="@string/skip_temporarily" />
+</menu>

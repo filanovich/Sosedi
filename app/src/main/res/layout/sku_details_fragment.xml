@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.skudetails.SkuDetailsFragment">
+
+    <by.imlab.sosedi.ui.global.views.ProductOrderView
+        android:id="@+id/productOrderDetails"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/counters"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/productOrderDetails">
+
+        <by.imlab.sosedi.ui.global.views.CommonCounterView
+            android:id="@+id/commonTypeCounter"
+            app:title="@string/indicate_the_quantity_or_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <by.imlab.sosedi.ui.global.views.CustomCounterView
+            android:id="@+id/customTypeCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/openSpacesBlock"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/counters">
+
+        <LinearLayout
+            android:id="@+id/placeCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/colorPrimary" />
+
+            <CheckBox
+                android:id="@+id/countWithoutPackage"
+                style="@style/TextAppearance.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:button="@null"
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableTint="@color/colorBoxStoke"
+                android:paddingHorizontal="@dimen/_28sdp"
+                android:text="@string/assembly_as_a_product_without_a_package"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <by.imlab.sosedi.ui.global.views.SpacesCounterView
+            android:id="@+id/numberPlacesCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/placeCheckbox"
+            app:title="@string/specify_the_number_of_packages" />
+
+        <View
+            android:id="@+id/barrier"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:alpha="0.90"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/numberPlacesCounter"
+            app:layout_constraintTop_toTopOf="@id/numberPlacesCounter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/_216sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/openSpacesBlock" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/collectButton"
+        android:layout_width="@dimen/_340sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:backgroundTint="@color/colorTextPrimary"
+        android:text="@string/to_collect"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_11sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/order_main_border"
+            android:padding="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/orderDate"
+                style="@style/TextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_char"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="15.03.20 12:37:30" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/orderNumber"
+                style="@style/TextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_175sdp"
+                android:text="@string/empty_char"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="234AB36C74563" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/orderCount"
+                style="@style/TextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_char"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="99" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/assemblyTime"
+                style="@style/TextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/empty_char"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orderDate"
+                tools:text="Время сборки: 31 мин." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/colorTextPrimary"
+                android:text="@string/take_to_work"
+                android:textAllCaps="false"
+                app:icon="@drawable/ic_cart"
+                app:iconGravity="textEnd"
+                app:iconSize="@dimen/_21sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/assemblyTime"
+                app:shapeAppearance="@style/CustomShapeAppearance" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/haveAnOrderError"
+                style="@style/TextAppearance.Regular.Italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_27sdp"
+                android:layout_marginBottom="@dimen/_27sdp"
+                android:text="@string/already_have_an_order"
+                android:textColor="@color/colorTextError"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/assemblyTime"
+                tools:text="У вас уже есть заказ в работе" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</merge>

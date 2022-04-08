@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="by.imlab.sosedi.ui.orderdetails.OrderDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/totalInfoBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_28sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedSkuText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="@string/fully_assembled_sku"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedSkuCount"
+            style="@style/TextAppearance.Regular.Big.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="7 из 15 шт." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedProductsText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/total_goods_collected"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalCollectedSkuText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalCollectedProductsCount"
+            style="@style/TextAppearance.Regular.Big.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalCollectedSkuCount"
+            tools:text="9 из 25 шт." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/openBagOrCargoSpaceText"
+            style="@style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/open_bag_or_cargo_place"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalCollectedProductsText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/openCargoPlaceButton"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:backgroundTint="@color/colorButtonSecondary"
+            android:elevation="@dimen/_10sdp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_plus"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="@dimen/_40sdp"
+            app:iconTint="@android:color/white"
+            app:layout_constraintStart_toEndOf="@id/openBagOrCargoSpaceText"
+            app:layout_constraintTop_toBottomOf="@id/totalCollectedProductsText"
+            app:shapeAppearanceOverlay="@style/RoundedShapeAppearance" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cargoSpaceNumber"
+            style="@style/TextAppearance.Medium.Big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalCollectedProductsCount"
+            tools:text="3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cargoSpaceNumberText"
+            style="@style/TextAppearance.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/packet_place"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cargoSpaceNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <by.imlab.sosedi.ui.global.views.CurrentSkuView
+        android:id="@+id/currentSkuDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <by.imlab.sosedi.ui.global.views.NextSkuView
+        android:id="@+id/nextSkuDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
